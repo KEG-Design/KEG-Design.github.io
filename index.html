@@ -475,16 +475,11 @@
     /* ── RESPONSIVE ────────────────────────────── */
     @media (max-width: 900px) {
       #hero {
-        min-height: 60vh;
-      }
-
-      .hero-name {
-        font-size: clamp(2.5rem, 10vw, 4rem);
-      }
-
-      .hero-desc {
-        font-size: 0.9rem;
-        max-width: 100%;
+        grid-template-columns: 1fr;
+        align-items: start;
+        min-height: auto;
+        gap: 2.5rem;
+        padding-top: 3rem;
       }
 
       .projects-grid { grid-template-columns: 1fr 1fr; }
@@ -507,7 +502,6 @@
       }
 
       .video-grid { grid-template-columns: 1fr; }
-      .hero-bg { object-position: center center; }
       .nav-links { display: none; }
     }
 
