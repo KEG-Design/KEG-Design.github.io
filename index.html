@@ -193,6 +193,8 @@
     .project-card.span-8  { grid-column: span 8; }
     .project-card.span-6  { grid-column: span 6; }
     .project-card.span-4  { grid-column: span 4; }
+    .project-card.span-5  { grid-column: span 5; }
+    .project-card.span-7  { grid-column: span 7; }
 
     .project-images {
       border: 0.5px solid var(--rule);
@@ -303,6 +305,40 @@
       letter-spacing: 0.08em;
       margin-top: 0.25rem;
       text-transform: uppercase;
+    }
+
+    /* ── XTREME LUBE IMAGE SET ─────────────────── */
+    .project-images.xtreme-set {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid var(--rule);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .project-images.xtreme-set .xtreme-banner {
+      width: 100%;
+      aspect-ratio: 2.702;
+      object-fit: contain;
+      display: block;
+      background: var(--surface);
+      border-bottom: 0.5px solid var(--rule);
+    }
+
+    .project-images.xtreme-set .xtreme-stacked {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+      background: var(--surface);
+      border-top: 0.5px solid var(--rule);
+    }
+
+    .project-images.xtreme-set .xtreme-stacked.ratio-near-square {
+      aspect-ratio: 1.067;
+    }
+
+    .project-images.xtreme-set .xtreme-stacked.ratio-portrait {
+      aspect-ratio: 0.868;
     }
 
     /* ── VIDEO ADS ─────────────────────────────── */
@@ -475,18 +511,25 @@
     /* ── RESPONSIVE ────────────────────────────── */
     @media (max-width: 900px) {
       #hero {
-        grid-template-columns: 1fr;
-        align-items: start;
-        min-height: auto;
-        gap: 2.5rem;
-        padding-top: 3rem;
+        min-height: 60vh;
+      }
+
+      .hero-name {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .hero-desc {
+        font-size: 0.9rem;
+        max-width: 100%;
       }
 
       .projects-grid { grid-template-columns: 1fr 1fr; }
 
       .project-card.span-12,
       .project-card.span-8,
+      .project-card.span-7,
       .project-card.span-6,
+      .project-card.span-5,
       .project-card.span-4 { grid-column: span 2; }
 
       .project-images.pair { grid-template-columns: 1fr; }
@@ -502,6 +545,7 @@
       }
 
       .video-grid { grid-template-columns: 1fr; }
+      .hero-bg { object-position: center center; }
       .nav-links { display: none; }
     }
 
@@ -509,7 +553,9 @@
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.span-12,
       .project-card.span-8,
+      .project-card.span-7,
       .project-card.span-6,
+      .project-card.span-5,
       .project-card.span-4 { grid-column: span 1; }
       .project-images.quad { grid-template-columns: 1fr 1fr; }
       .skills-columns { grid-template-columns: 1fr; }
@@ -593,22 +639,24 @@
           </div>
         </div>
 
-        <!-- OKSubies Facebook Ad — 4 cols -->
-        <div class="project-card span-4">
-          <div class="project-images single">
-            <img class="ratio-square" src="images/AD_Sample.png" alt="OKSubies special sale Facebook ad" />
+        <!-- Xtreme Lube Ads — 5 cols -->
+        <div class="project-card span-5">
+          <div class="project-images xtreme-set">
+            <img class="xtreme-banner" src="images/Header_Sample.png" alt="Xtreme Lube Facebook header" />
+            <img class="xtreme-stacked ratio-near-square" src="images/AD_Sample.png" alt="OKSubies special sale Facebook ad" />
+            <img class="xtreme-stacked ratio-portrait" src="images/Another_Sample.png" alt="Xtreme Lube car wash ad" />
           </div>
           <div class="project-info">
             <div>
-              <p class="project-title">OKSubies</p>
-              <p class="project-category">Social Media / Ad</p>
+              <p class="project-title">Xtreme Lube</p>
+              <p class="project-category">Social Media / Ads</p>
             </div>
             <span class="project-year">2024</span>
           </div>
         </div>
 
-        <!-- Sooner Indian Motorcycle Instagram Ads — 8 cols, 2x2 -->
-        <div class="project-card span-8">
+        <!-- Sooner Indian Motorcycle Instagram Ads — 7 cols, 2x2 -->
+        <div class="project-card span-7">
           <div class="project-images quad">
             <img src="images/ExampleModernPower.png" alt="Indian Scout Classic ad" />
             <img src="images/SampleCF.png" alt="CFMOTO adventure ad" />
